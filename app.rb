@@ -7,6 +7,8 @@ configure :development do
   BetterErrors.application_root = File.expand_path('..', __FILE__)
 end
 
+
 get '/' do
-  'Hello David!'
+  @usernames = [ 'ssaunier', 'Papillard' ]
+  erb :index
 end
